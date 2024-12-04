@@ -1,0 +1,23 @@
+python3 neural_network.py -r hadoop data/ag_news_data/train.csv
+python3 neural_network.py -r local /home/hd_user/storage/final/data/ag_news_data/train.csv
+python3 neural_network.py data/ag_news_data/train.csv
+
+python3 neural_network.py -r hadoop data/ag_news_data/train.csv
+
+python3 neural_network.py -c mrjob.conf -r hadoop data/ag_news_data/train.csv
+
+python3 neural_network.py -c mrjob.conf -r local data/ag_news_data/train.csv
+
+python3 neural_network.py data/ag_news_data/train.csv
+python3 neural_network_eval.py data/ag_news_data/train.csv
+python3 neural_network.py -c mrjob.conf data/ag_news_data/train.csv
+
+python3 neural_network.py -c mrjob.conf -r hadoop hdfs://final/data/ag_news_data/train.csv
+
+
+python3 neural_network.py -c mrjob.conf -r local /home/hd_user/storage/final/data/ag_news_data/train.csv
+
+python3 mr_word_count.py -c mrjob.conf -r hadoop my_file.txt
+
+sudo python3 mr_word_count.py -c mrjob.conf -r hadoop my_file.txt --setup 'pip install -r requirements.txt#'
+
