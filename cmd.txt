@@ -12,6 +12,18 @@ python3 neural_network.py data/ag_news_data/train.csv
 python3 neural_network_eval.py data/ag_news_data/train.csv
 python3 neural_network.py -c mrjob.conf data/ag_news_data/train.csv
 
+python3 embedding.py data/ag_news_data/train.csv
+
+sudo chmod -R 777 /home/hd_user/storage/final/
+
+
+.\embedding.py data/ag_news_data/train.csv
+.\neural_network_embed.py data/ag_news_data/train.csv
+.\neural_network_embed_eval.py data/ag_news_data/train.csv
+
+python3 embedding.py -c mrjob.conf -r local data/ag_news_data/train.csv
+
+
 python3 neural_network.py -c mrjob.conf -r hadoop hdfs://final/data/ag_news_data/train.csv
 
 
