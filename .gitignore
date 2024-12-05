@@ -1,3 +1,7 @@
 data/ag_news_data/test
 data/ag_news_data/train
-output/
+output/embed_weight.json
+output/model_weight.json
+output/grad_log.json
+output_10/model_weight.json
+output_10/grad_log.json

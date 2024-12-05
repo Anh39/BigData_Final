@@ -3,13 +3,15 @@ def extract(text: str) -> list[str]:
     return re.sub(r'[^a-z\s]', '', text.lower()).split()
 VOCAB = None
 ABS_OUTPUT_PATH = "/home/hd_user/storage/final/output"
-EMBED_DIM = 32
-EMBED_WINDOW = 1
+EMBED_DIM = 16
+# EMBED_WINDOW = 2
 SEQ_LENGTH = 32
-HIDDEN_SIZE = 512
+HIDDEN_SIZE = 128
 OUTPUT_SIZE = 4
-EMBED_LR = 1e-2
-NN_LR = 1e-1
+LR_MULTIPLER = 10 # s0.2
+EMBED_LR = 1e-3 * LR_MULTIPLER
+FC1_LR = 1e-3 * LR_MULTIPLER
+FC2_LR = 1e-3 * LR_MULTIPLER
 MAPPER_SPLIT = 0
 def get_abs_output_path():
     return ABS_OUTPUT_PATH
